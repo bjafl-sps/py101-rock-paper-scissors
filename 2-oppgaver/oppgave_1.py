@@ -11,6 +11,14 @@
 
 ## DIN KODE STARTER HER ##
 
+poeng = 0
+print(poeng)
+poeng = 1
+print(poeng)
+poeng = poeng + 1
+print(poeng)
+poeng += 1
+print(poeng)
 
 ##################################
 # Oppgave 2:                     #

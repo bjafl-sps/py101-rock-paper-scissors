@@ -14,7 +14,7 @@ from random import choice
 # Liste med gyldige valg
 GYLDIGE_VALG = ["stein", "saks", "papir"]
 
-def få_spiller_valg():
+def faa_spiller_valg():
     """
     Ber om og returnerer spillerens valg.
     Fortsetter å spørre til et gyldig valg er gitt.
