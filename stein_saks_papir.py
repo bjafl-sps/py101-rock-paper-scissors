@@ -80,6 +80,7 @@ def start_spill():
     # Variabler for å holde styr på poeng
     poeng_spiller = 0
     poeng_pc = 0
+    
     print("Velkommen til Stein, Saks, Papir!")
 
     ny_runde = True
@@ -89,8 +90,17 @@ def start_spill():
         vinner = avgjor_vinner(bruker_valg, datamaskin_valg)
         vis_resultat(bruker_valg, datamaskin_valg, vinner)
 
+        if vinner == SPILLER:
+            poeng_spiller += 1
+        else:
+            poeng_pc += 1
+
         spill_igjen = input("\nVil du spille igjen? (ja/nei): ").lower().strip()
         if spill_igjen != "ja":
-            break
+            ny_runde = False
+    
+    print(f"Poengsum:\nSpiller: {poeng_spiller}\nDatamaskin: {poeng_pc}")
 
     print("Takk for at du spilte!")
+
+start_spill()
